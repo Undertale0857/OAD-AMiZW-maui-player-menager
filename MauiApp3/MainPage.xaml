@@ -21,19 +21,14 @@
             <Button
                 Text="Dodaj gracza"
                 Command="{Binding AddPlayerCommandButton}" />
-            
-            
-            
-            
-
             <Label
                 Text="Lista graczy"
                 FontSize="24"
                 FontAttributes="Bold"
                 Margin="0,20,0,0"/>
             <CollectionView
-    ItemsSource="{Binding Players}"
-    HeightRequest="250">
+        ItemsSource="{Binding Players}"
+        HeightRequest="250">    
 
                 <CollectionView.ItemTemplate>
 
@@ -80,6 +75,22 @@
             <Label
                 Text="Wynik"
                 FontAttributes="Bold"/>
+            <Label
+                Text="USUWANIE GRACZA"
+                FontSize="24"
+                FontAttributes="Bold"
+                Margin="0,20,0,0"/>
+
+            <Entry
+                Placeholder="Podaj Id gracza do usunięcia"
+                Keyboard="Numeric"
+                Text="{Binding DeletePlayerId, Mode=TwoWay}"/>
+
+            <Button
+                Text="Usuń gracza"
+                Command="{Binding DeletePlayerCommandButton}"
+                BackgroundColor="#C62828"
+                TextColor="White"/>
             <Label
                 Text="{Binding SearchResult}"
                 FontSize="18"/>
